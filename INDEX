@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garima Fitness Coaching</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background:#f5f7fa;
+}
+
+.header {
+    background:#111;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:24px;
+}
+
+.hero {
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1 {
+    font-size:28px;
+}
+
+.box {
+    background:white;
+    margin:20px auto;
+    padding:25px;
+    width:90%;
+    max-width:400px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button {
+    background:#25D366;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover {
+    background:#1ebe5d;
+}
+
+.features {
+    padding:20px;
+    text-align:center;
+}
+
+.feature {
+    margin:15px;
+    font-size:16px;
+}
+
+.testimonial {
+    background:white;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.footer {
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+💪 Garima Fitness Coaching
+</div>
+
+<div class="hero">
+<h1>Transform Your Body in 90 Days 🔥</h1>
+<p>Weight Loss | Weight Gain | Personal Diet Plan</p>
+</div>
+
+<div class="box">
+<input id="name" placeholder="Your Name">
+<input id="goal" placeholder="Your Goal">
+<input id="phone" placeholder="Your Phone Number">
+
+<button onclick="sendData()">📲 Start on WhatsApp</button>
+</div>
+
+<div class="features">
+<h2>Why Choose Me?</h2>
+
+<div class="feature">✔ Personalized Diet Plans</div>
+<div class="feature">✔ Daily Support</div>
+<div class="feature">✔ Proven Results</div>
+</div>
+
+<div class="testimonial">
+“Lost 8kg in 2 months! Highly recommended.” ⭐⭐⭐⭐⭐
+</div>
+
+<div class="testimonial">
+“Best coach ever. Very supportive.” ⭐⭐⭐⭐⭐
+</div>
+
+<div class="footer">
+📞 Contact: 9452632741
+</div>
+
+<script>
+function sendData(){
+    var name = document.getElementById("name").value;
+    var goal = document.getElementById("goal").value;
+    var phoneInput = document.getElementById("phone").value;
+
+    if(name=="" || goal=="" || phoneInput==""){
+        alert("Please fill all details");
+        return;
+    }
+
+    var message = "Hello, I am " + name + ". My goal is " + goal + ". My number is " + phoneInput;
+
+    // WhatsApp
+    var url = "https://wa.me/919452632741?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+
+    // Save to Google Sheet
+    https://script.google.com/macros/s/AKfycbw4DVO8WvOHgZmob4Qe7h1KXPSJQg8T56R8ul7wMHD68eD4t-gL82aXWYDTDQTPd2e7/exec, {
+        method: "POST",
+        body: JSON.stringify({
+            name: name,
+            goal: goal,
+            phone: phoneInput
+        })
+    });
+}
+</script>
+
+</body>
+</html>
