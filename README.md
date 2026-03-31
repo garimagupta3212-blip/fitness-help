@@ -1,11 +1,1 @@
-MIT License
-
-Copyright (c) 2026 Garima Gupta
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software...
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+A professional fitness coaching website with WhatsApp integration for direct client communication. Built using HTML, CSS, and JavaScript with a clean UI, mobile-friendly design, and lead generation system.
